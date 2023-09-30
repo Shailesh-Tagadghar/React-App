@@ -18,3 +18,14 @@ function calc (a,b,op){
 
 calc(2,3,add)
 calc(3,1,sub)
+
+calc(5,5,function(x,y){
+    console.log(x*y);
+});
+
+
+// division of 2 number using fat arrow with callback func
+
+calc(25,5,(x,y)=>{
+    console.log(`division is ${x/y}`);
+});
