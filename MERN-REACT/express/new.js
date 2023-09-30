@@ -22,9 +22,11 @@ for(let i = 0; i< nums.length; i++){
 }
 
 //addition of 5 number using map fumction (square)
+
 arr1 = [1,2,3]
 arr2 = arr1.map((x,i) => {
     console.log("i am in ...");
     return x * x;
 })
-console.log(arr2);
+console.log(arr2);;
+
