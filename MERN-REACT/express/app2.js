@@ -31,6 +31,50 @@ app.get("/add", (req,res)=>{
     res.send(result);
 });
 
+
+app.use(express.json())
+
+//sub webservice //receive 2 raw json // return sub of it // use post method
+app.post("/sub", (req,res)=>{
+    console.log(req.body);
+
+    var x = req.body.num1;
+    var y = req.body.num2;
+    var z = req.body.num3;
+    var result = {
+        "status" : true,
+        "substraction" : x - y - z
+    }
+    res.send(result);
+});
+
+//put request for mul
+app.put("/mul", (req,res)=>{
+    console.log(req.body);
+
+    var x = req.body.num1;
+    var y = req.body.num2;
+    var result = {
+        "status" : true,
+        "multiplication" : x * y
+    }
+    res.send(result);
+});
+
+//delete request for division
+app.delete("/div", (req,res)=>{
+    console.log(req.body);
+
+    var x = req.body.num1;
+    var y = req.body.num2;
+    var result = {
+        "status" : true,
+        "division" : x / y
+    }
+    res.send(result);
+});
+
+
 app.listen(8089, () => {
     console.log(`listening to port 8089`);
 });
